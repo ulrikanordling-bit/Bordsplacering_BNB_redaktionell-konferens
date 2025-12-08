@@ -5,16 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bordsplacering - BNB Redaktionell Konferens 2025</title>
     <style>
+                .top-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 24px;
+            margin-bottom: 20px;
+        }
+        .logo {
+            max-width: 360px;
+        }
+        .logo img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .qr-box {
+            background: rgba(15, 23, 42, 0.7);
+            border-radius: 16px;
+            padding: 12px 16px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #cbd5f5;
+        }
+        .qr-box img {
+            max-width: 130px;
+            height: auto;
+            display: block;
+            margin: 8px auto 0;
+        }
+        .subtitle-small {
+            margin-top: 6px;
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+        .search-box {
+            position: relative;
+            margin: 60px auto 30px; /* flyttar sökrutan mer mot mitten */
+        }
+
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 40px 20px;
-            color: #fff;
+            <body>
+    <div class="container">
+        <div class="top-row">
+            <div class="logo">
+                <img src="bonnier_news_business_logo_svart_1_rad.png" alt="Bonnier News Business">
+            </div>
+            <div class="qr-box">
+                <div>Skanna för att öppna sidan</div>
+                <img src="qr_bordsplacering.png" alt="QR-kod till bordsplaceringen">
+            </div>
+        </div>
+
+        <h1>🍽️ BORDSPLACERING</h1>
+        <p class="subtitle">BNB Redaktionell Konferens • 10 december 2025</p>
+        <p class="subtitle-small">Mingel i ljusgården från kl 18.00 • Middag kl 18.45</p>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Skriv ditt namn..." autocomplete="off">
+        </div>
+
+        <div class="result" id="result"></div>
+        <p class="info">Middagen börjar kl 18:45</p>
+        <p class="guest-count">159 gäster • 29 bord</p>
+    </div>
+
+    <!-- här fortsätter ditt <script> precis som tidigare -->
+
         }
         .container { max-width: 500px; width: 100%; }
         h1 { text-align: center; margin-bottom: 10px; font-size: 1.8rem; font-weight: 300; letter-spacing: 2px; }
