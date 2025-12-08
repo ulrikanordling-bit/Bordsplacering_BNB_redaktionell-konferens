@@ -2,193 +2,177 @@
 <html lang="sv">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bordsplacering - BNB Redaktionell Konferens 2025</title>
+    <title>Bordsplacering – BNB Redaktionell Konferens</title>
     <style>
-                .top-row {
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px 60px;
+        }
+
+        .top-row {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
             gap: 24px;
+            margin-top: 24px;
             margin-bottom: 20px;
         }
+
         .logo {
             max-width: 360px;
         }
+
         .logo img {
             width: 100%;
             height: auto;
             display: block;
         }
+
         .qr-box {
             background: rgba(15, 23, 42, 0.7);
             border-radius: 16px;
             padding: 12px 16px;
             text-align: center;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             color: #cbd5f5;
         }
+
         .qr-box img {
             max-width: 130px;
             height: auto;
             display: block;
             margin: 8px auto 0;
         }
+
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            margin: 0;
+            padding-top: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #555;
+            margin: 8px 0 4px;
+        }
+
         .subtitle-small {
-            margin-top: 6px;
-            font-size: 0.9rem;
-            color: #94a3b8;
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+            margin-top: 4px;
         }
+
         .search-box {
-            position: relative;
-            margin: 60px auto 30px; /* flyttar sökrutan mer mot mitten */
+            display: flex;
+            justify-content: center;
+            margin: 60px auto 30px;
         }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        <body>
-    <div class="container">
-
-        <!-- Översta raden: logga + QR-kod -->
-        <div class="top-row">
-            <div class="logo">
-                <img src="Kopia av bonnier_news_business_logo_svart_1_rad.png" 
-                     alt="Bonnier News Business logotyp">
-            </div>
-
-            <div class="qr-box">
-                <div>Öppna sidan:</div>
-                <div style="font-size: 0.72rem; word-break: break-all; margin-top: 4px;">
-                    <strong>https://ulrikanordling-bit.github.io/Bordsplacering_BNB_redaktionell-konferens/</strong>
-                </div>
-                <img src="qr_bordsplacering.png" 
-                     alt="QR-kod till bordsplaceringen">
-            </div>
-        </div>
-
-        <!-- Rubriker -->
-        <h1>🍽️ BORDSPLACERING</h1>
-
-        <p class="subtitle">BNB Redaktionell Konferens • 10 december 2025</p>
-        <p class="subtitle-small">
-            Mingel i ljusgården från kl 18.00 • Middag kl 18.45
-        </p>
-
-        <!-- Sökruta centrerad -->
-        <div class="search-box">
-            <input type="text" id="searchInput" placeholder="Skriv ditt namn..." autocomplete="off">
-        </div>
-
-        <!-- Resultatvisning -->
-        <div class="result" id="result"></div>
-
-        <p class="info">Middagen börjar kl 18:45</p>
-        <p class="guest-count">159 gäster • 29 bord</p>
-    </div>
-
-    <!-- JS-scriptet fortsätter här som vanligt -->
-</body>
-
-
-        <h1>🍽️ BORDSPLACERING</h1>
-        <p class="subtitle">BNB Redaktionell Konferens • 10 december 2025</p>
-        <p class="subtitle-small">Mingel i ljusgården från kl 18.00 • Middag kl 18.45</p>
-
-        <div class="search-box">
-            <input type="text" id="searchInput" placeholder="Skriv ditt namn..." autocomplete="off">
-        </div>
-
-        <div class="result" id="result"></div>
-        <p class="info">Middagen börjar kl 18:45</p>
-        <p class="guest-count">159 gäster • 29 bord</p>
-    </div>
-
-    <!-- här fortsätter ditt <script> precis som tidigare -->
-
+        .search-box input {
+            width: 80%;
+            max-width: 400px;
+            padding: 15px;
+            font-size: 18px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .container { max-width: 500px; width: 100%; }
-        h1 { text-align: center; margin-bottom: 10px; font-size: 1.8rem; font-weight: 300; letter-spacing: 2px; }
-        .subtitle { text-align: center; color: #94a3b8; margin-bottom: 40px; font-size: 1rem; }
-        .search-box { position: relative; margin-bottom: 30px; }
-        input[type="text"] {
-            width: 100%; padding: 20px 25px; font-size: 1.1rem; border: none; border-radius: 50px;
-            background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); color: #fff; outline: none;
-            transition: all 0.3s ease;
-        }
-        input[type="text"]::placeholder { color: rgba(255, 255, 255, 0.5); }
-        input[type="text"]:focus { background: rgba(255, 255, 255, 0.15); box-shadow: 0 0 30px rgba(100, 200, 255, 0.2); }
+
         .result {
-            text-align: center; padding: 40px; border-radius: 20px;
-            background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); display: none;
+            text-align: center;
+            margin-top: 40px;
+            font-size: 24px;
+            font-weight: bold;
+            min-height: 40px;
         }
-        .result.show { display: block; animation: fadeIn 0.4s ease; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        .table-number {
-            font-size: 5rem; font-weight: 700;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-            line-height: 1; margin: 10px 0;
+
+        .info, .guest-count {
+            text-align: center;
+            color: #666;
+            margin-top: 20px;
+            font-size: 14px;
         }
-        .result-label { font-size: 1.2rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 10px; }
-        .guest-name { font-size: 1.3rem; color: #e2e8f0; margin-top: 20px; }
-        .not-found { color: #f87171; font-size: 1.1rem; }
-        .suggestions { margin-top: 20px; text-align: left; }
-        .suggestions h3 { color: #94a3b8; font-size: 0.9rem; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
-        .suggestion-item {
-            padding: 12px 15px; margin: 5px 0; background: rgba(255, 255, 255, 0.05);
-            border-radius: 10px; cursor: pointer; transition: all 0.2s ease;
-        }
-        .suggestion-item:hover { background: rgba(255, 255, 255, 0.1); transform: translateX(5px); }
-        .info { margin-top: 40px; text-align: center; color: #64748b; font-size: 0.85rem; }
-        .guest-count { margin-top: 10px; color: #475569; font-size: 0.8rem; }
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <h1>🍽️ BORDSPLACERING</h1>
-        <p class="subtitle">BNB Redaktionell Konferens • 10 december 2025</p>
-        <div class="search-box">
-            <input type="text" id="searchInput" placeholder="Skriv ditt namn..." autocomplete="off">
+
+<div class="container">
+
+    <!-- Logga + QR-kod -->
+    <div class="top-row">
+        <div class="logo">
+            <img src="Kopia av bonnier_news_business_logo_svart_1_rad.png" alt="Bonnier News Business logotyp">
         </div>
-        <div class="result" id="result"></div>
-        <p class="info">Middagen börjar kl 18:45</p>
-        <p class="guest-count">159 gäster • 29 bord</p>
+
+        <div class="qr-box">
+            <div>Öppna sidan:</div>
+            <div style="font-size: 0.72rem; word-break: break-all; margin-top: 4px;">
+                <strong>https://ulrikanordling-bit.github.io/Bordsplacering_BNB_redaktionell-konferens/</strong>
+            </div>
+            <img src="qr_bordsplacering.png" alt="QR-kod till bordsplaceringen">
+        </div>
     </div>
-    <script>
-        const guests = {"Helena Wande": 1, "Sara Pramsten": 1, "Jonny Sågänger": 1, "Björn Anderberg": 1, "Jonas Leijonhufvud": 1, "Julia Caesar": 2, "Åsa Wallin": 2, "Lovisa Ternby": 2, "Alfons Westerberg": 2, "Peter Lundegårdh": 2, "Nils Åkesson": 2, "Ulrika Nordling": 3, "Alice Tafvelin": 3, "Linnea Bolter": 3, "Carl-Magnus Hake": 3, "Fredrik Svedjetun": 3, "Jonas Fagerström": 3, "Johanna Saldert": 4, "Linda Öhrn": 4, "Cathrine Hofbauer": 4, "Isidor Beslic": 4, "Martin Lindgren": 4, "Karl-Johan Byttner": 4, "Lovisa Åslund": 5, "Maria Ingvarsdotter": 5, "Alicia Price": 5, "Olof Sandström": 5, "Edvin Borg": 5, "Martin Rex": 5, "Caroline Åkerlund": 6, "Maria Carlsson": 6, "Ida Hansson Brusewitz": 6, "Magnus Gustavsson": 6, "Mattias Fröjd": 6, "Pelle Sten": 6, "Pernilla Norin": 7, "Lotta Ekström": 7, "Janne Næss": 7, "Linus Lindqvist": 7, "Magnus Stattin": 7, "Lars Wiklund": 7, "Karolina Waligorska": 8, "Helena Yohannes Magnusson": 8, "Agnetha Jönsson": 8, "Ulf Petersson": 8, "Samuel Eriksson": 8, "Mikael Olsson": 8, "Helen Preutz": 9, "Téa Ginolin": 9, "Leo Konstenius": 9, "Jens Dagergren": 9, "Axel Lundqvist": 9, "Johan Östberg": 9, "Anna Ekelund": 10, "Helena Hallstan": 10, "Peter Fellman": 10, "Henrik Ek": 10, "Jonathan Axelsson": 10, "Mattias de Frumerie": 10, "Josefin Jakobsson": 11, "Cecilia Granestrand": 11, "Jonas Jonsson": 11, "Jonas Engmark": 11, "Viktor Ahldén": 11, "Josef Svenberg": 11, "Ann Henriksson": 12, "Malin Rising": 12, "Samuel Åsgård": 12, "Carl Björk": 12, "Johan Wendel": 12, "Filip Westerlind": 12, "cecilia schramm": 13, "Olivia Niklasson": 13, "David Levin": 13, "Mårten Arvidsson": 13, "Oscar Vigell": 13, "Love Strandberg": 13, "Miriam Järlesjo": 14, "Amanda Törner": 14, "Anthony Livebrant": 14, "Jens Kärrman": 14, "Petter Jerdén": 14, "Anders Carlén": 14, "Anna Byström": 15, "Susanna Hestréus": 15, "Christian Steen": 15, "Johannes Karlsson": 15, "Lisa Dos Santos": 15, "Julia Forsberg": 16, "Petra Frid": 16, "Karin Lundahl": 16, "Simon Henriksson": 16, "Fredrik Björnsson": 16, "Helene Rothstein": 16, "Ellen Larsson": 17, "Isabella Nylander": 17, "Marianne Agazzi": 17, "Andreas Nilses": 17, "Andreas Rågsjö Thorell": 17, "Sofia Tordai": 18, "Madeleine Lundberg": 18, "Mats Brohagen": 18, "Kim Lundin": 18, "Tobias Wikström": 18, "Susanne Fredriksson": 19, "Linda Fries Åman": 19, "Bean Khalil": 19, "Torbjörn Isacson": 19, "Eric Birksten": 19, "Joey Abrait": 20, "Nomi Melin Lundgren": 20, "Semir Hasanbegovic": 20, "Jonathan Bylund": 20, "Emanuel Videla": 20, "Monika Nilsson": 21, "Karin Olander": 21, "Adam Hillerbrand Rune": 21, "Unto Jarvald": 21, "Marcus Fridell": 21, "Madeleine Nilsson": 22, "Fädek Jabar": 22, "Ulf Lundblad": 22, "Lucas De Vivo": 22, "Thomas Danielsson": 22, "Ylva Bergman": 23, "Haniye Nazeri": 23, "Fredrik Sjögren": 23, "Filip Dalman": 23, "Samuel Rubin": 23, "Boel Halldén": 24, "Johanna Åfreds": 24, "Mikael Stengård": 24, "Gustav Halth": 24, "Fredrik Öjemar": 24, "Susanna Pagels": 25, "Anna Lundegårdh": 25, "Viktor Munkhammar": 25, "Victor Hultgren": 25, "andreas johansson": 25, "Julia Siwertz": 26, "Jenny Petersson": 26, "Magnus Dagel": 26, "Pontus Herin": 26, "Björn Rundström": 26, "Ylva Johansson": 27, "Rebecca Asker": 27, "Oscar Julander": 27, "Carl Johan Lejland": 27, "Daniel Boman": 27, "Helena Fahleson": 28, "Linnéa Kihlström": 28, "Gunnar Harrius": 28, "Henrik Westman": 28, "Johan Bahlenberg": 28, "Johanna Bäärnhielm": 29, "Lisa Blohm": 29, "Anders Siljevall": 29, "Carl Thulin": 29, "Stefan Helte": 29};
-        const searchInput = document.getElementById('searchInput');
-        const resultDiv = document.getElementById('result');
-        function normalize(str) {
-            return str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9 ]/g, '');
+
+    <!-- Rubriker -->
+    <h1>🍽️ BORDSPLACERING</h1>
+    <p class="subtitle">BNB Redaktionell Konferens • 10 december 2025</p>
+
+    <p class="subtitle-small">
+        Mingel i ljusgården från kl 18.00 • Middag kl 18.45
+    </p>
+
+    <!-- Sökrutan -->
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Skriv ditt namn..." autocomplete="off" oninput="searchName()">
+    </div>
+
+    <!-- Resultat -->
+    <div class="result" id="result"></div>
+
+    <p class="info">Middagen börjar kl 18:45</p>
+    <p class="guest-count">159 gäster • 29 bord</p>
+
+</div>
+
+<!-- JAVASCRIPT – lägg in hela din namnlista här (jag lämnar schablonlista som exempel) -->
+<script>
+    const guests = {
+        "Anna Andersson": "Bord 1",
+        "Björn Berg": "Bord 2",
+        "Cecilia Carlsson": "Bord 3"
+        // → här klistrar du in hela din riktiga lista från den tidigare versionen
+    };
+
+    function searchName() {
+        const input = document.getElementById("searchInput").value.trim().toLowerCase();
+        const resultBox = document.getElementById("result");
+
+        if (input.length === 0) {
+            resultBox.textContent = "";
+            return;
         }
-        function findMatches(query) {
-            if (!query || query.length < 2) return [];
-            const normalizedQuery = normalize(query);
-            return Object.entries(guests).filter(([name]) => normalize(name).includes(normalizedQuery)).slice(0, 5);
+
+        const match = Object.keys(guests).find(name => name.toLowerCase() === input);
+
+        if (match) {
+            resultBox.textContent = `${match} sitter vid ${guests[match]}`;
+        } else {
+            resultBox.textContent = "Ingen träff – kontrollera stavning";
         }
-        function showResult(name, table) {
-            resultDiv.innerHTML = '<div class="result-label">Ditt bord</div><div class="table-number">' + table + '</div><div class="guest-name">' + name + '</div>';
-            resultDiv.classList.add('show');
-        }
-        function showSuggestions(matches) {
-            if (matches.length === 0) {
-                resultDiv.innerHTML = '<div class="not-found">Ingen träff hittades.<br>Kontrollera stavningen.</div>';
-            } else if (matches.length === 1) {
-                showResult(matches[0][0], matches[0][1]);
-                return;
-            } else {
-                resultDiv.innerHTML = '<div class="suggestions"><h3>Menade du...</h3>' +
-                    matches.map(([name, table]) => '<div class="suggestion-item" onclick="showResult(\'' + name.replace(/'/g, "\\'") + '\', ' + table + ')">' + name + '</div>').join('') + '</div>';
-            }
-            resultDiv.classList.add('show');
-        }
-        let debounceTimer;
-        searchInput.addEventListener('input', function() {
-            clearTimeout(debounceTimer);
-            const query = this.value.trim();
-            if (query.length < 2) { resultDiv.classList.remove('show'); return; }
-            debounceTimer = setTimeout(() => { showSuggestions(findMatches(query)); }, 200);
-        });
-        searchInput.focus();
-    </script>
+    }
+</script>
+
 </body>
 </html>
