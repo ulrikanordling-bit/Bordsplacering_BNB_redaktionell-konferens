@@ -45,18 +45,49 @@
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            <body>
+        <body>
     <div class="container">
+
+        <!-- Översta raden: logga + QR-kod -->
         <div class="top-row">
             <div class="logo">
-                <img src="bonnier_news_business_logo_svart_1_rad.png" alt="Bonnier News Business">
+                <img src="Kopia av bonnier_news_business_logo_svart_1_rad.png" 
+                     alt="Bonnier News Business logotyp">
             </div>
+
             <div class="qr-box">
-                <div>Skanna för att öppna sidan</div>
-                <img src="qr_bordsplacering.png" alt="QR-kod till bordsplaceringen">
+                <div>Öppna sidan:</div>
+                <div style="font-size: 0.72rem; word-break: break-all; margin-top: 4px;">
+                    <strong>https://ulrikanordling-bit.github.io/Bordsplacering_BNB_redaktionell-konferens/</strong>
+                </div>
+                <img src="qr_bordsplacering.png" 
+                     alt="QR-kod till bordsplaceringen">
             </div>
         </div>
+
+        <!-- Rubriker -->
+        <h1>🍽️ BORDSPLACERING</h1>
+
+        <p class="subtitle">BNB Redaktionell Konferens • 10 december 2025</p>
+        <p class="subtitle-small">
+            Mingel i ljusgården från kl 18.00 • Middag kl 18.45
+        </p>
+
+        <!-- Sökruta centrerad -->
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Skriv ditt namn..." autocomplete="off">
+        </div>
+
+        <!-- Resultatvisning -->
+        <div class="result" id="result"></div>
+
+        <p class="info">Middagen börjar kl 18:45</p>
+        <p class="guest-count">159 gäster • 29 bord</p>
+    </div>
+
+    <!-- JS-scriptet fortsätter här som vanligt -->
+</body>
+
 
         <h1>🍽️ BORDSPLACERING</h1>
         <p class="subtitle">BNB Redaktionell Konferens • 10 december 2025</p>
